@@ -45,15 +45,6 @@ jobs:
         env:
           MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch gh-pages branch
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          git fetch origin gh-pages:gh-pages || echo "gh-pages branch does not exist yet"
-
-      - name: Deploy dev docs
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: mike deploy --push dev
-
       - name: Deploy release docs
         if: github.event_name == 'release'
         run: |
@@ -62,4 +53,9 @@ jobs:
           # Remove 'v' prefix if present
           VERSION=${VERSION#v}
           mike deploy --push --update-aliases $VERSION latest
+      
+      - name: Set latest as default
+        if: github.event_name == 'release'
+        run: |
+          git fetch origin gh-pages:gh-pages
           mike set-default --push latest
