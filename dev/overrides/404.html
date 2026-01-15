@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  .md-content__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    text-align: center;
+  }
+  .error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--md-primary-fg-color);
+    margin: 0;
+    line-height: 1;
+  }
+  .error-message {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+    color: var(--md-default-fg-color--light);
+  }
+  .error-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
+
+<h1 class="error-code">404</h1>
+<p class="error-message">Page not found</p>
+<p>The page you're looking for doesn't exist or has been moved.</p>
+
+<div class="error-actions">
+  <a href="{{ config.site_url }}" class="md-button md-button--primary">
+    Go to Home
+  </a>
+  <a href="{{ config.site_url }}getting-started/installation/" class="md-button">
+    Getting Started
+  </a>
+</div>
+{% endblock %}
