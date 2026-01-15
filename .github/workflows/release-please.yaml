@@ -21,8 +21,57 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
-          release-type: simple
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pre-commit-snippet
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: pip install build
+
+      - name: Build package
+        run: python -m build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  cleanup-beta-tag:
+    name: Cleanup Beta Tag
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Delete beta tag
+        run: |
+          # Extract version from tag (e.g., v1.0.6 -> 1.0.6)
+          VERSION=${{ needs.release-please.outputs.tag_name }}
+          VERSION=${VERSION#v}
+          
+          # Parse to get beta tag name
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          BETA_TAG="beta-${MAJOR}.${MINOR}.${PATCH}"
+          
+          echo "Deleting beta tag: $BETA_TAG"
+          git push origin --delete "$BETA_TAG" 2>/dev/null || echo "Beta tag $BETA_TAG not found, skipping"
 
   deploy-docs:
     name: Deploy Documentation
