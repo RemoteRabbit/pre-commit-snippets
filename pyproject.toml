@@ -1,10 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pre_commit_snippet*"]
+
 [project]
 name = "pre-commit-snippet"
-version = "0.1.0"
+version = "1.0.5"
 description = "Pre-commit hook that syncs markdown snippets from a central repository"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
+keywords = ["pre-commit", "snippets", "markdown", "documentation", "sync"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Pre-processors",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/RemoteRabbit/pre-commit-snippets"
+Documentation = "https://remoterabbit.github.io/pre-commit-snippets"
+Repository = "https://github.com/RemoteRabbit/pre-commit-snippets"
+Issues = "https://github.com/RemoteRabbit/pre-commit-snippets/issues"
 
 [project.scripts]
 pre-commit-snippet = "pre_commit_snippet.cli:main"
