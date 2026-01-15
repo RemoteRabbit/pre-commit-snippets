@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.2...v1.0.3) (2026-01-15)
+
+
+### Bug Fixes
+
+* docs ci token ([#9](https://github.com/RemoteRabbit/pre-commit-snippets/issues/9)) ([7d3b36a](https://github.com/RemoteRabbit/pre-commit-snippets/commit/7d3b36a861562df864f07022cbc3831702be6515))
+* Remove dev docs deployment ([#11](https://github.com/RemoteRabbit/pre-commit-snippets/issues/11)) ([83e8a55](https://github.com/RemoteRabbit/pre-commit-snippets/commit/83e8a551b9f74a3bdc594e0f69cc7a88edbb68e7))
+
 ## [1.0.2](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.1...v1.0.2) (2026-01-15)
 
 
