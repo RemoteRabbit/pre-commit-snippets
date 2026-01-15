@@ -1,7 +1,5 @@
 # pre-commit-snippet
 
-[![PyPI version](https://img.shields.io/pypi/v/pre-commit-snippet)](https://pypi.org/project/pre-commit-snippet/)
-[![Python versions](https://img.shields.io/pypi/pyversions/pre-commit-snippet)](https://pypi.org/project/pre-commit-snippet/)
 [![CI](https://github.com/RemoteRabbit/pre-commit-snippets/actions/workflows/ci.yaml/badge.svg)](https://github.com/RemoteRabbit/pre-commit-snippets/actions/workflows/ci.yaml)
 [![Documentation](https://img.shields.io/badge/docs-latest-blue)](https://remoterabbit.github.io/pre-commit-snippets/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
