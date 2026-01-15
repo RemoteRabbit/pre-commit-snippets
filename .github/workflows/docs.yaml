@@ -42,6 +42,8 @@ jobs:
       - name: Build docs (PR check)
         if: github.event_name == 'pull_request'
         run: mkdocs build --strict
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch gh-pages branch
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
