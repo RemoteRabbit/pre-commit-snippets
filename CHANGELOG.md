@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.0...v1.0.1) (2026-01-15)
+
+
+### Bug Fixes
+
+* stop overriding default docs version on every push ([b6cd249](https://github.com/RemoteRabbit/pre-commit-snippets/commit/b6cd2491b55c5778f973289dfebedb1dcd96af09))
+
 ## 1.0.0 (2026-01-15)
 
 
