@@ -1,8 +1,8 @@
-site_name: pre-commit-snippet
+site_name: pre-commit-snippets
 site_description: A pre-commit hook that syncs markdown snippets from a central repository
-site_url: https://YOUR_USERNAME.github.io/pre-commit-snippet
-repo_url: https://github.com/YOUR_USERNAME/pre-commit-snippet
-repo_name: pre-commit-snippet
+site_url: https://remoterabbit.github.io/pre-commit-snippets
+repo_url: https://github.com/RemoteRabbit/pre-commit-snippets
+repo_name: pre-commit-snippets
 edit_uri: edit/main/docs/
 
 theme:
@@ -88,13 +88,12 @@ plugins:
       fallback_to_build_date: true
       enabled: !ENV [CI, false]
   - git-committers:
-      repository: YOUR_USERNAME/pre-commit-snippet
+      repository: RemoteRabbit/pre-commit-snippets
       branch: main
       enabled: !ENV [CI, false]
   - minify:
       minify_html: true
-  - tags:
-      tags_file: tags.md
+  - tags
   - privacy
   - social:
       cards_layout_options:
@@ -109,10 +108,7 @@ plugins:
         # 'old-page.md': 'new-page.md'
   - offline:
       enabled: !ENV [OFFLINE, false]
-  - group:
-      enabled: !ENV [CI, false]
-      plugins:
-        - optimize
+
 
 extra:
   version:
@@ -120,9 +116,9 @@ extra:
     default: latest
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/YOUR_USERNAME/pre-commit-snippet
+      link: https://github.com/RemoteRabbit/pre-commit-snippets
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/pre-commit-snippet/
+      link: https://pypi.org/project/pre-commit-snippets/
   generator: false
   consent:
     title: Cookie consent
