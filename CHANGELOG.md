@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.4...v1.0.5) (2026-01-15)
+
+
+### Bug Fixes
+
+* Issues with entry point for the hooks ([#14](https://github.com/RemoteRabbit/pre-commit-snippets/issues/14)) ([f7ec0be](https://github.com/RemoteRabbit/pre-commit-snippets/commit/f7ec0bea9e3f7be5c0f6b9cd997bbe88f3784828))
+
 ## [1.0.4](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.3...v1.0.4) (2026-01-15)
 
 
