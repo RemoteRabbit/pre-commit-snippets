@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to pre-commit-snippet!
+Thank you for your interest in contributing to pre-commit-snippets!
 
 ## Conventional Commits
 
@@ -54,8 +54,8 @@ refactor: extract YAML parsing into separate module
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/pre-commit-snippet.git
-cd pre-commit-snippet
+git clone https://github.com/RemoteRabbit/pre-commit-snippets.git
+cd pre-commit-snippets
 
 # Create venv, install dependencies, and set up pre-commit hooks
 make setup
@@ -79,7 +79,7 @@ pre-commit install
 ### Project Structure
 
 ```
-pre-commit-snippet/
+pre-commit-snippets/
 ├── main.py                      # CLI entry point
 ├── pre_commit_snippet/
 │   ├── __init__.py              # Package init, version
@@ -158,7 +158,7 @@ To test the hook locally:
    git init
 
    # Create config
-   cat > pre-commit-snippet-config.yaml << EOF
+   cat > .pre-commit-snippets-config.yaml << EOF
    snippet_repo: /tmp/test-snippets
    target_files:
      - README.md
@@ -180,7 +180,7 @@ To test the hook locally:
 
    ```bash
    cd /tmp/test-repo
-   python /path/to/pre-commit-snippet/main.py --verbose
+   python /path/to/pre-commit-snippets/main.py --verbose
    ```
 
 4. **Verify** the README.md was updated with the snippet content.

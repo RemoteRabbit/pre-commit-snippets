@@ -21,7 +21,7 @@ def define_env(env):
     """Define custom macros and variables for MkDocs."""
 
     # Project metadata
-    env.variables["project_name"] = "pre-commit-snippet"
+    env.variables["project_name"] = "pre-commit-snippets"
     env.variables["min_python_version"] = "3.9"
     env.variables["version"] = _get_version()
 

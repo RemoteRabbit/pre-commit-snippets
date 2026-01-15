@@ -19,7 +19,7 @@ The snippet name (`license-notice` in this example) corresponds to a file in you
 ## Command Line Options
 
 ```bash
-pre-commit-snippet [OPTIONS]
+pre-commit-snippets [OPTIONS]
 ```
 
 ### `--dry-run`
@@ -27,7 +27,7 @@ pre-commit-snippet [OPTIONS]
 Preview changes without modifying files.
 
 ```bash
-pre-commit-snippet --dry-run
+pre-commit-snippets --dry-run
 ```
 
 ### `--verbose`, `-v`
@@ -35,7 +35,7 @@ pre-commit-snippet --dry-run
 Print info-level logs showing files being processed and updates.
 
 ```bash
-pre-commit-snippet --verbose
+pre-commit-snippets --verbose
 ```
 
 ### `--debug`
@@ -43,7 +43,7 @@ pre-commit-snippet --verbose
 Print debug-level logs with timestamps, commands, and hash values.
 
 ```bash
-pre-commit-snippet --debug
+pre-commit-snippets --debug
 ```
 
 ## Examples
@@ -51,7 +51,7 @@ pre-commit-snippet --debug
 ### Normal Run
 
 ```bash
-$ pre-commit-snippet
+$ pre-commit-snippets
 ```
 
 No output if all snippets are up to date.
@@ -59,7 +59,7 @@ No output if all snippets are up to date.
 ### Preview Changes
 
 ```bash
-$ pre-commit-snippet --dry-run
+$ pre-commit-snippets --dry-run
 Would update: README.md
 Dry run complete. No files were modified.
 ```
@@ -67,7 +67,7 @@ Dry run complete. No files were modified.
 ### Verbose Output
 
 ```bash
-$ pre-commit-snippet --verbose
+$ pre-commit-snippets --verbose
 Snippet repo: https://github.com/your-org/snippets.git
 Target files: README.md, CONTRIBUTING.md
 Processing README.md
@@ -80,8 +80,8 @@ Staged modified files
 ### Debug Output
 
 ```bash
-$ pre-commit-snippet --debug
-2024-01-15 10:30:00 [DEBUG] pre_commit_snippet: Starting pre-commit-snippet
+$ pre-commit-snippets --debug
+2024-01-15 10:30:00 [DEBUG] pre_commit_snippet: Starting pre-commit-snippets
 2024-01-15 10:30:00 [DEBUG] pre_commit_snippet: Running command: git rev-parse --show-toplevel
 2024-01-15 10:30:00 [DEBUG] pre_commit_snippet: Repository root: /home/user/project
 ...

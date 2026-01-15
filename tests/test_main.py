@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests for pre-commit-snippet hook."""
+"""Tests for pre-commit-snippets hook."""
 
 from __future__ import annotations
 
@@ -52,7 +52,7 @@ target_files:
   - README.md
   - docs/guide.md
 """
-    (repo / "pre-commit-snippet-config.yaml").write_text(config)
+    (repo / ".pre-commit-snippets-config.yaml").write_text(config)
 
     readme = """# Project
 
@@ -214,7 +214,7 @@ def test_empty_target_files_exits_cleanly(tmp_path: Path, snippet_repo: Path) ->
     config = f"""snippet_repo: {snippet_repo}
 target_files:
 """
-    (repo / "pre-commit-snippet-config.yaml").write_text(config)
+    (repo / ".pre-commit-snippets-config.yaml").write_text(config)
 
     result = subprocess.run(
         ["python", str(get_main_script())],
@@ -289,7 +289,7 @@ snippet_branch: test-branch
 target_files:
   - README.md
 """
-    (repo / "pre-commit-snippet-config.yaml").write_text(config)
+    (repo / ".pre-commit-snippets-config.yaml").write_text(config)
     (repo / "README.md").write_text("""# Test
 <!-- SNIPPET-START: test -->
 placeholder

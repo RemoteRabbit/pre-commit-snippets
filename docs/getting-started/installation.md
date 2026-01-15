@@ -4,13 +4,13 @@
 
 ## Using pre-commit framework
 
-The recommended way to use pre-commit-snippet is with the [pre-commit](https://pre-commit.com/) framework.
+The recommended way to use pre-commit-snippets is with the [pre-commit](https://pre-commit.com/) framework.
 
 Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 repos:
-  - repo: https://github.com/YOUR_USERNAME/pre-commit-snippet
+  - repo: https://github.com/RemoteRabbit/pre-commit-snippets
     rev: v0.1.0  # Use the latest tag
     hooks:
       - id: snippet-sync
@@ -27,13 +27,13 @@ pre-commit install
 Install directly with pip:
 
 ```bash
-pip install pre-commit-snippet
+pip install pre-commit-snippets
 ```
 
 Then run manually or add to your workflow:
 
 ```bash
-pre-commit-snippet
+pre-commit-snippets
 ```
 
 ## Manual installation
@@ -41,8 +41,8 @@ pre-commit-snippet
 Clone the repository and run directly:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pre-commit-snippet.git
-cd pre-commit-snippet
+git clone https://github.com/RemoteRabbit/pre-commit-snippets.git
+cd pre-commit-snippets
 python main.py
 ```
 

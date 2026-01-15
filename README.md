@@ -1,4 +1,4 @@
-# pre-commit-snippet
+# pre-commit-snippets
 
 [![CI](https://github.com/RemoteRabbit/pre-commit-snippets/actions/workflows/ci.yaml/badge.svg)](https://github.com/RemoteRabbit/pre-commit-snippets/actions/workflows/ci.yaml)
 [![Documentation](https://img.shields.io/badge/docs-latest-blue)](https://remoterabbit.github.io/pre-commit-snippets/)
@@ -23,7 +23,7 @@ Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 repos:
-  - repo: https://github.com/RemoteRabbit/pre-commit-snippet
+  - repo: https://github.com/RemoteRabbit/pre-commit-snippets
     rev: v1.0.4  # Use the latest tag
     hooks:
       - id: snippet-sync
@@ -32,12 +32,12 @@ repos:
 ### Manual installation
 
 1. Clone this repository
-2. Create a `pre-commit-snippet-config.yaml` configuration file (see below)
+2. Create a `.pre-commit-snippets-config.yaml` configuration file (see below)
 3. Run `python main.py` before committing
 
 ## Configuration
 
-Create a `pre-commit-snippet-config.yaml` file in your repository root:
+Create a `.pre-commit-snippets-config.yaml` file in your repository root:
 
 ```yaml
 # URL of the repository containing your snippets (required)
@@ -84,7 +84,7 @@ When the hook runs, it will:
 ## Command Line Options
 
 ```bash
-pre-commit-snippet [OPTIONS]
+pre-commit-snippets [OPTIONS]
 # or
 python main.py [OPTIONS]
 ```
@@ -99,16 +99,16 @@ python main.py [OPTIONS]
 
 ```bash
 # Normal run
-pre-commit-snippet
+pre-commit-snippets
 
 # Preview what would change
-pre-commit-snippet --dry-run
+pre-commit-snippets --dry-run
 
 # See detailed processing info
-pre-commit-snippet --verbose
+pre-commit-snippets --verbose
 
 # Debug issues with full detail
-pre-commit-snippet --debug
+pre-commit-snippets --debug
 ```
 
 ## Cache File
@@ -118,7 +118,7 @@ The hook creates a `.snippet-hashes.json` file to track which snippets have been
 ## Project Structure
 
 ```
-pre-commit-snippet/
+pre-commit-snippets/
 ├── main.py                      # CLI entry point
 ├── pre_commit_snippet/
 │   ├── __init__.py              # Package init

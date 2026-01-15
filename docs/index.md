@@ -1,4 +1,4 @@
-# pre-commit-snippet
+# pre-commit-snippets
 
 A pre-commit hook that automatically syncs markdown snippets from a central repository into your documentation files.
 
@@ -14,10 +14,10 @@ A pre-commit hook that automatically syncs markdown snippets from a central repo
 ## Quick Start
 
 ```bash
-pip install pre-commit-snippet
+pip install pre-commit-snippets
 ```
 
-Create a `pre-commit-snippet-config.yaml`:
+Create a `.pre-commit-snippets-config.yaml`:
 
 ```yaml
 snippet_repo: https://github.com/your-org/snippets.git
@@ -36,7 +36,7 @@ This will be replaced with content from my-snippet.md
 Run the hook:
 
 ```bash
-pre-commit-snippet
+pre-commit-snippets
 ```
 
 ## Next Steps

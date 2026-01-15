@@ -1,5 +1,5 @@
 """
-Logging configuration for pre-commit-snippet.
+Logging configuration for pre-commit-snippets.
 
 This module provides a centralized logger and configuration function for
 the package. It supports three verbosity levels: WARNING (default),

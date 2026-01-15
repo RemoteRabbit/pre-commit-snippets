@@ -1,7 +1,7 @@
 """
 Configuration loading and validation.
 
-This module handles loading the pre-commit-snippet-config.yaml file and
+This module handles loading the .pre-commit-snippets-config.yaml file and
 validating its contents. It defines dataclasses for structured configuration
 and provides a minimal YAML parser with no external dependencies.
 """

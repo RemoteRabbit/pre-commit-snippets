@@ -1,13 +1,13 @@
 # Contributing
 
-Thank you for your interest in contributing to pre-commit-snippet!
+Thank you for your interest in contributing to pre-commit-snippets!
 
 ## Development Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/pre-commit-snippet.git
-cd pre-commit-snippet
+git clone https://github.com/RemoteRabbit/pre-commit-snippets.git
+cd pre-commit-snippets
 
 # Install dependencies and set up pre-commit hooks
 make setup

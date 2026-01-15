@@ -16,7 +16,7 @@ Modules:
 Example:
     Run as a pre-commit hook::
 
-        pre-commit-snippet --verbose
+        pre-commit-snippets --verbose
 
     Or import and use programmatically::
 
