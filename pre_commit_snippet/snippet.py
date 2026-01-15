@@ -63,9 +63,7 @@ def replace_blocks(
             while j < len(lines) and not END_RE.search(lines[j]):
                 j += 1
             if j >= len(lines):
-                logger.warning(
-                    "Missing SNIPPET-END after line %d in %s", i + 1, md_path
-                )
+                logger.warning("Missing SNIPPET-END after line %d in %s", i + 1, md_path)
                 out.append(lines[i])
                 i += 1
                 continue

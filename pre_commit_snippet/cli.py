@@ -31,9 +31,7 @@ def main() -> int:
     Returns:
         Exit code (0 for success, non-zero for failure).
     """
-    parser = argparse.ArgumentParser(
-        description="Sync markdown snippets from a central repository."
-    )
+    parser = argparse.ArgumentParser(description="Sync markdown snippets from a central repository.")
     parser.add_argument(
         "--dry-run",
         action="store_true",
@@ -56,9 +54,7 @@ def main() -> int:
     setup_logging(verbose=args.verbose, debug=args.debug)
 
     logger.debug("Starting pre-commit-snippet")
-    logger.debug(
-        "Arguments: dry_run=%s, verbose=%s, debug=%s", args.dry_run, args.verbose, args.debug
-    )
+    logger.debug("Arguments: dry_run=%s, verbose=%s, debug=%s", args.dry_run, args.verbose, args.debug)
 
     # Get repo root
     try:

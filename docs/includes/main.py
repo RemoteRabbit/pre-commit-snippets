@@ -28,7 +28,7 @@ def define_env(env):
     @env.macro
     def feature_flag(name: str) -> str:
         """Generate a feature flag notice."""
-        return f'!!! info "Feature Flag"\n    This feature requires the `{name}` flag to be enabled.'
+        return f'!!! info "Feature Flag"\n    Requires the `{name}` flag to be enabled.'
 
     @env.macro
     def cli_command(command: str, description: str) -> str:

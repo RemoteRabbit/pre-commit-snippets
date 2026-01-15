@@ -40,7 +40,10 @@ def load_cache(cache_file: Path) -> dict[str, str]:
     if not cache_file.is_file():
         return {}
     try:
-        return json.loads(cache_file.read_text(encoding="utf-8"))
+        data = json.loads(cache_file.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return dict(data)
+        return {}
     except Exception:
         return {}
 
