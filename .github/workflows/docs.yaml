@@ -50,9 +50,7 @@ jobs:
 
       - name: Deploy dev docs
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          mike deploy --push dev
-          mike set-default --push dev || true
+        run: mike deploy --push dev
 
       - name: Deploy release docs
         if: github.event_name == 'release'
