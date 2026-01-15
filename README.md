@@ -23,22 +23,10 @@ Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 repos:
-  - repo: https://github.com/YOUR_USERNAME/pre-commit-snippet
-    rev: v0.1.0  # Use the latest tag
+  - repo: https://github.com/RemoteRabbit/pre-commit-snippet
+    rev: v1.0.4  # Use the latest tag
     hooks:
       - id: snippet-sync
-```
-
-### Using pip
-
-```bash
-pip install pre-commit-snippet
-```
-
-Then run:
-
-```bash
-pre-commit-snippet
 ```
 
 ### Manual installation
