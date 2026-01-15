@@ -4,6 +4,17 @@ MkDocs Macros plugin main module.
 Define custom macros and filters for use in documentation.
 """
 
+import tomllib
+from pathlib import Path
+
+
+def _get_version() -> str:
+    """Read version from pyproject.toml."""
+    pyproject_path = Path(__file__).parent.parent.parent / "pyproject.toml"
+    with open(pyproject_path, "rb") as f:
+        data = tomllib.load(f)
+    return data["project"]["version"]
+
 
 def define_env(env):
     """Define custom macros and variables for MkDocs."""
@@ -11,6 +22,7 @@ def define_env(env):
     # Project metadata
     env.variables["project_name"] = "pre-commit-snippet"
     env.variables["min_python_version"] = "3.9"
+    env.variables["version"] = _get_version()
 
     @env.macro
     def since(version: str) -> str:
