@@ -1,0 +1,14 @@
+# Default owners for everything in the repo
+* @RemoteRabbit
+
+# Documentation
+/docs/ @RemoteRabbit
+*.md @RemoteRabbit
+
+# Core source code
+/pre_commit_snippet/ @RemoteRabbit
+
+# CI/CD and configuration
+/.github/ @RemoteRabbit
+pyproject.toml @RemoteRabbit
+mkdocs.yml @RemoteRabbit
