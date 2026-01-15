@@ -1,5 +1,5 @@
 """
-Command-line interface for pre-commit-snippet.
+Command-line interface for pre-commit-snippets.
 
 This module provides the main entry point and argument parsing for the
 pre-commit hook. It orchestrates the overall flow: loading configuration,
@@ -53,7 +53,7 @@ def main() -> int:
     # Setup logging based on flags
     setup_logging(verbose=args.verbose, debug=args.debug)
 
-    logger.debug("Starting pre-commit-snippet")
+    logger.debug("Starting pre-commit-snippets")
     logger.debug("Arguments: dry_run=%s, verbose=%s, debug=%s", args.dry_run, args.verbose, args.debug)
 
     # Get repo root
@@ -65,7 +65,7 @@ def main() -> int:
         return 1
 
     # Load configuration
-    config_path = repo_root / "pre-commit-snippet-config.yaml"
+    config_path = repo_root / ".pre-commit-snippets-config.yaml"
     try:
         config = load_config(config_path)
         logger.debug("Loaded config from %s", config_path)
@@ -144,7 +144,7 @@ def main() -> int:
     elif not any_modified:
         logger.info("All snippets are up to date")
 
-    logger.debug("Finished pre-commit-snippet")
+    logger.debug("Finished pre-commit-snippets")
     return 0
 
 

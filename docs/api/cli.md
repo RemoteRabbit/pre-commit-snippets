@@ -1,5 +1,5 @@
 # cli
 
-Command-line interface for pre-commit-snippet.
+Command-line interface for pre-commit-snippets.
 
 ::: pre_commit_snippet.cli

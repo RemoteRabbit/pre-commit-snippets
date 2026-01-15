@@ -36,7 +36,7 @@ Repository = "https://github.com/RemoteRabbit/pre-commit-snippets"
 Issues = "https://github.com/RemoteRabbit/pre-commit-snippets/issues"
 
 [project.scripts]
-pre-commit-snippet = "pre_commit_snippet.cli:main"
+pre-commit-snippets = "pre_commit_snippet.cli:main"
 
 [tool.ruff]
 target-version = "py39"

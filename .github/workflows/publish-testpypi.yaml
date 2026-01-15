@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/pre-commit-snippet
+      url: https://test.pypi.org/p/pre-commit-snippets
     steps:
       - uses: actions/checkout@v4
 
@@ -71,4 +71,4 @@ jobs:
           echo "✅ Published to TestPyPI!"
           echo ""
           echo "Install with:"
-          echo "  pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pre-commit-snippet==${{ steps.version.outputs.test_version }}"
+          echo "  pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ pre-commit-snippets==${{ steps.version.outputs.test_version }}"

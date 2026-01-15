@@ -1,6 +1,6 @@
 # Configuration
 
-Create a `pre-commit-snippet-config.yaml` file in your repository root.
+Create a `.pre-commit-snippets-config.yaml` file in your repository root.
 
 ## Example Configuration
 

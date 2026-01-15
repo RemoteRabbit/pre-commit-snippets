@@ -1,6 +1,6 @@
 # API Reference
 
-This section documents the Python API for pre-commit-snippet.
+This section documents the Python API for pre-commit-snippets.
 
 ## Package Structure
 

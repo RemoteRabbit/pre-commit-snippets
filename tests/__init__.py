@@ -1,1 +1,1 @@
-"""Tests for pre-commit-snippet."""
+"""Tests for pre-commit-snippets."""

@@ -1,5 +1,5 @@
-# pre-commit-snippet configuration
-# Copy this file to pre-commit-snippet-config.yaml and customize
+# pre-commit-snippets configuration
+# Copy this file to .pre-commit-snippets-config.yaml and customize
 
 # URL of the repository containing your snippets (required)
 snippet_repo: https://github.com/your-org/snippets.git

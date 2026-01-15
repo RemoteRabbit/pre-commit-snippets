@@ -1,4 +1,4 @@
-// Custom JavaScript for pre-commit-snippet documentation
+// Custom JavaScript for pre-commit-snippets documentation
 
 // Add copy feedback for inline code
 document.addEventListener("DOMContentLoaded", function() {
