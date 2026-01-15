@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.0.0](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.5...v2.0.0) (2026-01-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Project renamed from pre-commit-snippet to pre-commit-snippets.
+
+### Features
+
+* pypi publishing ([#16](https://github.com/RemoteRabbit/pre-commit-snippets/issues/16)) ([db37fad](https://github.com/RemoteRabbit/pre-commit-snippets/commit/db37fadb59c230b56ed5f5341cfda94368a7bf9b))
+
+
+### Bug Fixes
+
+* rename package to pre-commit-snippets ([#19](https://github.com/RemoteRabbit/pre-commit-snippets/issues/19)) ([2d0e2cc](https://github.com/RemoteRabbit/pre-commit-snippets/commit/2d0e2cc3314ac576eb0d8111ab17803b37d7d2bf))
+* yaml syntax in publish-beta workflow and check-yaml pre-commit ([#18](https://github.com/RemoteRabbit/pre-commit-snippets/issues/18)) ([4a12b49](https://github.com/RemoteRabbit/pre-commit-snippets/commit/4a12b49cc719d3f59770f39dc990fcdba685772f))
+
+
+### Code Refactoring
+
+* rename project to pre-commit-snippets ([#20](https://github.com/RemoteRabbit/pre-commit-snippets/issues/20)) ([e78347a](https://github.com/RemoteRabbit/pre-commit-snippets/commit/e78347af026f62a9b80f3f294352e42422ea8011))
+
 ## [1.0.5](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.4...v1.0.5) (2026-01-15)
 
 
