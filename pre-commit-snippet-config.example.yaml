@@ -1,0 +1,22 @@
+# pre-commit-snippet configuration
+# Copy this file to pre-commit-snippet-config.yaml and customize
+
+# URL of the repository containing your snippets (required)
+snippet_repo: https://github.com/your-org/snippets.git
+
+# Branch or tag to use (optional)
+# Default: default branch
+snippet_branch: main
+
+# Subdirectory within the snippet repo where snippets are stored (optional)
+# Default: repository root
+snippet_subdir: snippets
+
+# File extension for snippet files (optional)
+# Default: .md
+snippet_ext: .md
+
+# List of files to process for snippet markers (required)
+target_files:
+  - README.md
+  - docs/CONTRIBUTING.md

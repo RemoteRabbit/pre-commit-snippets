@@ -1,0 +1,8 @@
+- id: snippet-sync
+  name: Sync markdown snippets
+  description: Expands markdown snippets from a central repository using paired start/end markers
+  entry: main.py
+  language: python
+  types: [markdown]
+  pass_filenames: false
+  always_run: true
