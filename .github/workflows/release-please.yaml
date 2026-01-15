@@ -65,11 +65,11 @@ jobs:
           # Extract version from tag (e.g., v1.0.6 -> 1.0.6)
           VERSION=${{ needs.release-please.outputs.tag_name }}
           VERSION=${VERSION#v}
-          
+
           # Parse to get beta tag name
           IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
           BETA_TAG="beta-${MAJOR}.${MINOR}.${PATCH}"
-          
+
           echo "Deleting beta tag: $BETA_TAG"
           git push origin --delete "$BETA_TAG" 2>/dev/null || echo "Beta tag $BETA_TAG not found, skipping"
 

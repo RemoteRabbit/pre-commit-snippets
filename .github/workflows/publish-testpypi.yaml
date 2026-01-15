@@ -33,14 +33,14 @@ jobs:
         id: version
         run: |
           CURRENT=$(python -c "import toml; print(toml.load('pyproject.toml')['project']['version'])")
-          
+
           if [ -n "${{ github.event.inputs.version_suffix }}" ]; then
             TEST_VERSION="${CURRENT}.${{ github.event.inputs.version_suffix }}"
           else
             TIMESTAMP=$(date +%Y%m%d%H%M%S)
             TEST_VERSION="${CURRENT}.test${TIMESTAMP}"
           fi
-          
+
           echo "test_version=$TEST_VERSION" >> $GITHUB_OUTPUT
           echo "Test version: $TEST_VERSION"
 
@@ -48,12 +48,12 @@ jobs:
         run: |
           python -c "
           import toml
-          
+
           with open('pyproject.toml', 'r') as f:
               data = toml.load(f)
-          
+
           data['project']['version'] = '${{ steps.version.outputs.test_version }}'
-          
+
           with open('pyproject.toml', 'w') as f:
               toml.dump(data, f)
           "

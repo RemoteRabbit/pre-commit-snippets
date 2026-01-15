@@ -91,7 +91,7 @@ Paths are relative to the repository root.
 
 ## Cache File
 
-The hook creates a `.snippet-hashes.json` file to track which snippets have been applied. 
+The hook creates a `.snippet-hashes.json` file to track which snippets have been applied.
 
 !!! tip
     Commit this file to your repository to avoid unnecessary rewrites on other machines.
