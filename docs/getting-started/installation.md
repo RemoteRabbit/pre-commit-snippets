@@ -1,5 +1,7 @@
 # Installation
 
+**Current version: {{ version }}**
+
 ## Using pre-commit framework
 
 The recommended way to use pre-commit-snippet is with the [pre-commit](https://pre-commit.com/) framework.
