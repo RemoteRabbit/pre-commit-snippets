@@ -4,8 +4,9 @@ MkDocs Macros plugin main module.
 Define custom macros and filters for use in documentation.
 """
 
-import tomllib
 from pathlib import Path
+
+import tomllib
 
 
 def _get_version() -> str:
