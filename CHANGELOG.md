@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.1...v1.0.2) (2026-01-15)
+
+
+### Bug Fixes
+
+* remove python and pypi from badges ([#6](https://github.com/RemoteRabbit/pre-commit-snippets/issues/6)) ([714518e](https://github.com/RemoteRabbit/pre-commit-snippets/commit/714518e830f5d0d06461e2543eafc014f8bd7f81))
+
 ## [1.0.1](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.0...v1.0.1) (2026-01-15)
 
 
