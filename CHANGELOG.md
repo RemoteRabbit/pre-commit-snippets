@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.3...v1.0.4) (2026-01-15)
+
+
+### Bug Fixes
+
+* move docs deployment to release-please workflow ([#12](https://github.com/RemoteRabbit/pre-commit-snippets/issues/12)) ([1a5d970](https://github.com/RemoteRabbit/pre-commit-snippets/commit/1a5d97078664a1f7ae89935303d4b91da3b4002f))
+
 ## [1.0.3](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.2...v1.0.3) (2026-01-15)
 
 
