@@ -42,6 +42,7 @@ class Config:
 
     sources: list[SnippetSource] = field(default_factory=list)
     target_files: list[str] = field(default_factory=list)
+    cache_path: str = ".snippet-hashes.json"
 
     @property
     def primary_source(self) -> SnippetSource | None:
@@ -141,4 +142,8 @@ def load_config(config_path: Path) -> Config:
     if not isinstance(target_files, list):
         target_files = []
 
-    return Config(sources=sources, target_files=target_files)
+    cache_path = cfg.get("cache_path", ".snippet-hashes.json")
+    if not isinstance(cache_path, str):
+        cache_path = ".snippet-hashes.json"
+
+    return Config(sources=sources, target_files=target_files, cache_path=cache_path)

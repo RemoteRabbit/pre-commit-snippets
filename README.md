@@ -53,6 +53,9 @@ snippet_subdir: snippets
 # File extension for snippet files (optional, default: .md)
 snippet_ext: .md
 
+# Path for the snippet hash cache file (optional, default: .snippet-hashes.json)
+cache_path: .snippet-hashes.json
+
 # List of files to process (required)
 target_files:
   - README.md
@@ -95,6 +98,7 @@ python main.py [OPTIONS]
 | `--dry-run` | Preview changes without modifying files |
 | `--verbose`, `-v` | Print info-level logs (files being processed, updates) |
 | `--debug` | Print debug-level logs with timestamps (commands, hashes, paths) |
+| `--config PATH` | Path to config file (default: `.pre-commit-snippets-config.yaml` in repo root) |
 
 ### Examples
 
