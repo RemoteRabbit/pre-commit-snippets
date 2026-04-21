@@ -24,7 +24,13 @@ Example:
         exit_code = main()
 """
 
+from importlib.metadata import PackageNotFoundError, version
+
 from pre_commit_snippet.cli import main
 
 __all__ = ["main"]
-__version__ = "0.1.0"
+
+try:
+    __version__ = version("pre-commit-snippets")
+except PackageNotFoundError:
+    __version__ = "0.0.0-dev"

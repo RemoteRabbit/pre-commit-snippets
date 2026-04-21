@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -88,7 +89,7 @@ def get_main_script() -> Path:
 def test_replaces_snippet_content(target_repo: Path) -> None:
     """Test that snippets are replaced with content from snippet repo."""
     result = subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         capture_output=True,
         text=True,
@@ -103,7 +104,7 @@ def test_replaces_snippet_content(target_repo: Path) -> None:
 def test_replaces_multiple_files(target_repo: Path) -> None:
     """Test that multiple target files are processed."""
     subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         check=True,
         capture_output=True,
@@ -117,7 +118,7 @@ def test_replaces_multiple_files(target_repo: Path) -> None:
 def test_creates_cache_file(target_repo: Path) -> None:
     """Test that the cache file is created."""
     subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         check=True,
         capture_output=True,
@@ -130,7 +131,7 @@ def test_creates_cache_file(target_repo: Path) -> None:
 def test_no_rewrite_when_unchanged(target_repo: Path) -> None:
     """Test that files are not rewritten when snippets haven't changed."""
     subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         check=True,
         capture_output=True,
@@ -140,7 +141,7 @@ def test_no_rewrite_when_unchanged(target_repo: Path) -> None:
     mtime1 = readme.stat().st_mtime
 
     subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         check=True,
         capture_output=True,
@@ -161,7 +162,7 @@ content
 """)
 
     result = subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         capture_output=True,
         text=True,
@@ -180,7 +181,7 @@ content without end marker
 """)
 
     result = subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=target_repo,
         capture_output=True,
         text=True,
@@ -196,7 +197,7 @@ def test_missing_config_fails(tmp_path: Path) -> None:
     git_init(repo)
 
     result = subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=repo,
         capture_output=True,
         text=True,
@@ -217,7 +218,7 @@ target_files:
     (repo / ".pre-commit-snippets-config.yaml").write_text(config)
 
     result = subprocess.run(
-        ["python", str(get_main_script())],
+        [sys.executable, str(get_main_script())],
         cwd=repo,
         capture_output=True,
         text=True,
@@ -232,7 +233,7 @@ def test_dry_run_does_not_modify_files(target_repo: Path) -> None:
     original_content = readme.read_text()
 
     result = subprocess.run(
-        ["python", str(get_main_script()), "--dry-run"],
+        [sys.executable, str(get_main_script()), "--dry-run"],
         cwd=target_repo,
         capture_output=True,
         text=True,
@@ -247,7 +248,7 @@ def test_dry_run_does_not_modify_files(target_repo: Path) -> None:
 def test_verbose_output(target_repo: Path) -> None:
     """Test that --verbose produces detailed output."""
     result = subprocess.run(
-        ["python", str(get_main_script()), "--verbose"],
+        [sys.executable, str(get_main_script()), "--verbose"],
         cwd=target_repo,
         capture_output=True,
         text=True,
@@ -259,7 +260,7 @@ def test_verbose_output(target_repo: Path) -> None:
 def test_debug_output(target_repo: Path) -> None:
     """Test that --debug produces debug-level output."""
     result = subprocess.run(
-        ["python", str(get_main_script()), "--debug"],
+        [sys.executable, str(get_main_script()), "--debug"],
         cwd=target_repo,
         capture_output=True,
         text=True,
@@ -299,7 +300,7 @@ placeholder
     git_cmd(["git", "commit", "-m", "Initial"], repo)
 
     result = subprocess.run(
-        ["python", str(get_main_script()), "--verbose"],
+        [sys.executable, str(get_main_script()), "--verbose"],
         cwd=repo,
         capture_output=True,
         text=True,
