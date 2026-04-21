@@ -16,6 +16,10 @@ snippet_subdir: snippets
 # Default: .md
 snippet_ext: .md
 
+# Path for the snippet hash cache file (optional)
+# Default: .snippet-hashes.json
+cache_path: .snippet-hashes.json
+
 # List of files to process for snippet markers (required)
 target_files:
   - README.md

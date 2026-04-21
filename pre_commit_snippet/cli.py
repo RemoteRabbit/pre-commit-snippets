@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import subprocess
 import sys
+from pathlib import Path
 
 from pre_commit_snippet.cache import load_cache, save_cache
 from pre_commit_snippet.config import load_config
@@ -48,6 +49,12 @@ def main() -> int:
         action="store_true",
         help="Print debug information (implies --verbose).",
     )
+    parser.add_argument(
+        "--config",
+        type=str,
+        default=None,
+        help="Path to config file (default: .pre-commit-snippets-config.yaml in repo root).",
+    )
     args = parser.parse_args()
 
     # Setup logging based on flags
@@ -65,7 +72,7 @@ def main() -> int:
         return 1
 
     # Load configuration
-    config_path = repo_root / ".pre-commit-snippets-config.yaml"
+    config_path = Path(args.config) if args.config else repo_root / ".pre-commit-snippets-config.yaml"
     try:
         config = load_config(config_path)
         logger.debug("Loaded config from %s", config_path)
@@ -105,7 +112,7 @@ def main() -> int:
         return 1
 
     # Load cache
-    cache_file = repo_root / ".snippet-hashes.json"
+    cache_file = repo_root / config.cache_path
     cache = load_cache(cache_file)
     logger.debug("Loaded cache with %d entries", len(cache))
 
@@ -136,7 +143,8 @@ def main() -> int:
     cleanup_temp_dir(tmp_dir)
 
     if any_modified and not args.dry_run:
-        stage_files(config.target_files, repo_root)
+        files_to_stage = config.target_files + [config.cache_path]
+        stage_files(files_to_stage, repo_root)
         logger.info("Staged modified files")
 
     if args.dry_run and any_modified:
