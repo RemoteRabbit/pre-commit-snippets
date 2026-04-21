@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v2.0.0...v2.0.1) (2026-04-21)
+
+
+### Bug Fixes
+
+* Update entrypoint typo and fix tests ([#23](https://github.com/RemoteRabbit/pre-commit-snippets/issues/23)) ([6b208c5](https://github.com/RemoteRabbit/pre-commit-snippets/commit/6b208c5a20a9cf2cadb240b09c837c2fce28e37e))
+
 ## [2.0.0](https://github.com/RemoteRabbit/pre-commit-snippets/compare/v1.0.5...v2.0.0) (2026-01-15)
 
 
