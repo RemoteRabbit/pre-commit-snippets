@@ -1,0 +1,77 @@
+/* Custom styles for pre-commit-snippets documentation */
+
+/* Header announcement bar styling */
+.md-banner {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Code block enhancements */
+.md-typeset code {
+  border-radius: 0.2rem;
+}
+
+/* Improved admonition styling */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.4rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* Card-like styling for navigation items */
+.md-nav__link--active {
+  font-weight: 700;
+}
+
+/* Smooth transitions */
+.md-header,
+.md-tabs {
+  transition: background-color 0.25s, color 0.25s;
+}
+
+/* Status badges */
+.md-typeset .md-status {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.2rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.md-typeset .md-status--new {
+  background-color: #00c853;
+  color: white;
+}
+
+.md-typeset .md-status--deprecated {
+  background-color: #ff5252;
+  color: white;
+}
+
+/* Footer styling */
+.md-footer {
+  margin-top: 2rem;
+}
+
+/* Code annotation improvements */
+.md-annotation__index {
+  font-weight: 700;
+}
+
+/* Keyboard keys styling enhancement */
+.md-typeset kbd {
+  box-shadow: 0 0.1rem 0 0.05rem var(--md-default-fg-color--lighter);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+  }
+}
